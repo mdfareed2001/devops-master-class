@@ -56,8 +56,12 @@ ls ~/aws/aws_keys/ # Make sure that the keys file is present
 ### Ansible Commands
 
 ```
-cd /in28Minutes/git/devops-master-class/ansible 
-ansible --version
+cd  /mnt/c/Shared_folder/GitHub/devops-master-class/ansible
+ansible --version      
+ Note : If getting warning as below:
+    [WARNING]: Ansible is being run in a world writable directory (/mnt/c/Shared_folder/GitHub/devops-master-class/ansible), ignoring it as an ansible.cfg source. For more
+    information see https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir
+  Execute this command "export ANSIBLE_CONFIG=./ansible.cfg"    
 ansible -m ping all
 ansible all -a "whoami"
 ansible all -a "uname"
