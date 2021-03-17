@@ -59,14 +59,16 @@ ls ~/aws/aws_keys/ # Make sure that the keys file is present
 cd ~       //That is /home/mo313808
 export AWS_ACCESS_KEY_ID=**************     //will get after creating key-pair with name default-ec2 and downloading from AWS
 export AWS_SECRET_ACCESS_KEY=**************  //will get after creating key-pair with name default-ec2 and downloading from AWS
-ls ~/aws/aws_keys/default-ec2.pem  //it is mandatory that this path should exist in home directory & ansible.cfg file
+ls ~/aws/aws_keys/default-ec2.pem  //it is mandatory that this path should exist in home directory & in file ansible.cfg
 chmod 400 /home/mo313808/aws/aws_keys/default-ec2.pem
 cd  /mnt/c/Shared_folder/GitHub/devops-master-class/ansible      //if using WSL 
-ansible --version      
+ansible --version    
+
  Note : If getting warning as below:
     [WARNING]: Ansible is being run in a world writable directory (/mnt/c/Shared_folder/GitHub/devops-master-class/ansible), ignoring it as an ansible.cfg source. For more
     information see https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir
-  Execute this command "export ANSIBLE_CONFIG=./ansible.cfg"    
+  Execute this command "export ANSIBLE_CONFIG=./ansible.cfg" 
+  
 ansible -m ping all      //before executing provide public ip address of ec2 created in ansible.cfg file.
 ansible all -a "whoami"
 ansible all -a "uname"
