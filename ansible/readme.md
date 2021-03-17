@@ -54,6 +54,8 @@ ls ~/aws/aws_keys/ # Make sure that the keys file is present
 ```
 
 ### Ansible Commands
+
+```
 cd ~       //That is /home/mo313808
 export AWS_ACCESS_KEY_ID=**************     //will get after creating key-pair with name default-ec2 and downloading from AWS
 export AWS_SECRET_ACCESS_KEY=**************  //will get after creating key-pair with name default-ec2 and downloading from AWS
